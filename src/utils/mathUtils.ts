@@ -7,7 +7,7 @@ import * as d3 from "d3";
 
 import { Bounds, Point } from "../core/interfaces";
 
-const nativeMath: Math = (<any>window).Math;
+const nativeMath: Math = (typeof window === 'undefined') ? Math : (<any>window).Math;
 
 /**
  * Checks if x is between a and b.
