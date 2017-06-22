@@ -7,7 +7,7 @@ import * as d3 from "d3";
 
 import { Range, SimpleSelection } from "../core/interfaces";
 
-const nativeMath: Math = (<any>window).Math;
+const nativeMath: Math = (typeof window === "undefined") ? Math : (<any>window).Math;
 
 /**
  * Returns whether the child is in fact a child of the parent

@@ -41,7 +41,7 @@ export type GenericStackingResult<D> = Utils.Map<Dataset, Utils.Map<string | num
  */
 export type StackingResult = GenericStackingResult<string>;
 
-const nativeMath: Math = (<any>window).Math;
+const nativeMath: Math = (typeof window === "undefined") ? Math : (<any>window).Math;
 
 /**
  * Computes the StackingResult (value and offset) for each data point in each Dataset.
