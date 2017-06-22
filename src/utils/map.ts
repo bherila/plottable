@@ -13,7 +13,7 @@ export class Map<K, V> {
   private _es6Map: any;
 
   public constructor() {
-    if (typeof (<any>window).Map === "function") {
+    if (typeof window !== "undefined" && typeof (<any>window).Map === "function") {
       this._es6Map = new (<any>window).Map();
     } else {
       this._keyValuePairs = [];

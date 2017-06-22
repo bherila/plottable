@@ -5,7 +5,7 @@
 
 import * as d3 from "d3";
 
-const nativeArray = (typeof window === 'undefined') ? Array : (<any>window).Array;
+const nativeArray = (typeof window === "undefined") ? Array : (<any>window).Array;
 
 /**
  * Takes two arrays of numbers and adds them together

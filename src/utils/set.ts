@@ -14,7 +14,7 @@ export class Set<T> {
   private _es6Set: any;
 
   constructor() {
-    if (typeof window !== 'undefined' &&  && typeof (<any>window).Set === "function") {
+    if (typeof window !== "undefined" && typeof (<any>window).Set === "function") {
       this._es6Set = new (<any>window).Set();
     } else {
       this._values = [];

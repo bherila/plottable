@@ -6,7 +6,7 @@
 import * as d3 from "d3";
 import { SimpleSelection } from "../core/interfaces";
 
-const nativeMath: Math = (typeof window === 'undefined') ? Math : (<any>window).Math;
+const nativeMath: Math = (typeof window === "undefined") ? Math : (<any>window).Math;
 
 /**
  * Return contrast ratio between two colors

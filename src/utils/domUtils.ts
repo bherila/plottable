@@ -50,10 +50,12 @@ export let SCREEN_REFRESH_RATE_MILLISECONDS = 1000 / 60;
  * @param {() => void} callback The callback to call in the next animation frame
  */
 export function requestAnimationFramePolyfill(callback: () => void) {
-  if (window.requestAnimationFrame != null) {
-    window.requestAnimationFrame(callback);
-  } else {
-    setTimeout(callback, SCREEN_REFRESH_RATE_MILLISECONDS);
+  if (typeof window !== "undefined") {
+    if (window.requestAnimationFrame != null) {
+      window.requestAnimationFrame(callback);
+    } else {
+      setTimeout(callback, SCREEN_REFRESH_RATE_MILLISECONDS);
+    }
   }
 }
 

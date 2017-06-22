@@ -30,7 +30,7 @@ export class CanvasBuffer {
     constructor(
         public screenWidth: number,
         public screenHeight: number,
-        public devicePixelRatio = window.devicePixelRatio,
+        public devicePixelRatio = (typeof window === "undefined" ? 1 : window.devicePixelRatio),
     ){
         this.pixelWidth = screenWidth * devicePixelRatio;
         this.pixelHeight = screenHeight * devicePixelRatio;
